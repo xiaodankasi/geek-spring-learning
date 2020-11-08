@@ -7,15 +7,16 @@
         http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <!--    通过导入复用-->
-    <import resource="denpendency-lookup-context.xml"/>
+    <import resource="dependency-lookup-context.xml"/>
     <bean id="userRepository" class="org.geekbang.thinking.in.spring.ioc.overview.repository.UserRepository" autowire="byType">
         <!--        手动配置 -->
-        <!--<property name="users">
+       <!-- <property name="users">
             <util:list>
                 <ref bean="user"/>
                 <ref bean="superUser"/>
             </util:list>
-        </property>-->
+        </property>
+        <property name="objectFactory" ref="objectFactory"/>-->
     </bean>
 
 </beans>

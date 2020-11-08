@@ -6,7 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 超级
+ * 超级类
+ * @author fc
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

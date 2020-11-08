@@ -27,6 +27,9 @@ public class UserRepository {
      */
     private BeanFactory beanFactory;
 
+    /**
+     *
+     */
     private ObjectFactory<ApplicationContext> objectFactory;
 
     public Collection<User> getUsers() {
