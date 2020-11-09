@@ -3,18 +3,14 @@ package org.geekbang.thinking.in.spring.ioc.overview.container;
 import org.geekbang.thinking.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
 /**
- * AnnotationApplicationContext IoC 容器示例
+ * 注解能力 {@link ApplicationContext } IoC 容器示例
  *
  * @author Administrator
  * @version 1.0
@@ -32,6 +28,8 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
         applicationContext.refresh();
         //    依赖查找集合对象
         lookupByCollectionType(applicationContext);
+        //    关闭上下文
+        applicationContext.close();
     }
 
     /**

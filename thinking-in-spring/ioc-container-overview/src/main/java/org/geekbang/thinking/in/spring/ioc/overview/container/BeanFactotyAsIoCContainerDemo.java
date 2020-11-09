@@ -9,7 +9,7 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import java.util.Map;
 
 /**
- * BeanFactoty IoC 容器示例
+ * {@link BeanFactory} 作为IoC 容器示例
  *
  * @author Administrator
  * @version 1.0
@@ -22,7 +22,7 @@ public class BeanFactotyAsIoCContainerDemo {
         // 创建beanFactory容器
         DefaultListableBeanFactory listableBeanFactory = new DefaultListableBeanFactory();
         // XML classPath 配置路径
-        String location = "META-INF/denpendency-lookup-context.xml";
+        String location = "META-INF/dependency-lookup-context.xml";
         //    加载配置
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(listableBeanFactory);
         int beanDefinitionCount = reader.loadBeanDefinitions(location);
