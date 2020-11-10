@@ -34,4 +34,8 @@ public class User {
     public String toString() {
         return "User{" + "id=" + id + ", name='" + name + '\'' + '}';
     }
+
+    public static User createUser() {
+        return new User();
+    }
 }
