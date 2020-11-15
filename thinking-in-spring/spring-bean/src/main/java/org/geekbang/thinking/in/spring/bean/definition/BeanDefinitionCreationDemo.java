@@ -14,7 +14,7 @@ import org.springframework.beans.factory.support.GenericBeanDefinition;
  * @className BeanDefinitionCrationDemo
  * @date 2020/2/5 18:14
  */
-public class BeanDefinitionCrationDemo {
+public class BeanDefinitionCreationDemo {
 
     public static void main(String[] args) {
 
