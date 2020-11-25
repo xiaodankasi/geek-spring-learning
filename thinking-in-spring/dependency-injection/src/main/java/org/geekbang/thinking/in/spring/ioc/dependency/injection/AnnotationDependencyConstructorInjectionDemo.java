@@ -7,19 +7,19 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * XmlDependencySetterInjectionDemo
- * 基于 XML 资源的依赖 Setter 方法注入
+ * 基于 XML 资源的依赖 Constructor 方法注入
  *
  * @author fc
  * @version 1.0
  * @date 2020/11/16 23:57
  */
-public class AnnotationDependencySetterInjectionDemo {
+public class AnnotationDependencyConstructorInjectionDemo {
 
     public static void main(String[] args) {
         // 创建beanFactory容器
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         // 注册bean
-        applicationContext.register(AnnotationDependencySetterInjectionDemo.class);
+        applicationContext.register(AnnotationDependencyConstructorInjectionDemo.class);
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(applicationContext);
 
         String xmlResourcePath = "classpath:/META-INF/dependency-lookup-context.xml";
@@ -38,8 +38,6 @@ public class AnnotationDependencySetterInjectionDemo {
 
     @Bean
     public UserHolder userHolder(User user) {
-        UserHolder userHolder = new UserHolder();
-        userHolder.setUser(user);
-        return userHolder;
+        return new UserHolder(user);
     }
 }
